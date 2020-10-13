@@ -22,6 +22,8 @@ android {
 }
 
 dependencies {
+    def okhttp3Version = '3.12.10'
+    def kotlinVersion = '1.4.10'
     api "com.squareup.okhttp3:okhttp:$okhttp3Version"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
 
@@ -34,5 +36,5 @@ dependencies {
     api "io.grpc:grpc-kotlin-stub:$grpcKotlinVersion", withoutGrpcProtobuf
 }
 
-apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
-apply from: rootProject.file('gradle/kotlin-static-analysis.gradle')
+//apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
+//apply from: rootProject.file('gradle/kotlin-static-analysis.gradle')
