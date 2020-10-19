@@ -13,6 +13,7 @@ public class GrpcChuckerInterceptor(
     private val port: Int = 0,
     private val context: Context,
     private val collector: ChuckerCollector = ChuckerCollector(context),
+    private val onErrorMapper: OnErrorMapper? = null,
 ) : ClientInterceptor {
     override fun <ReqT : Any?, RespT : Any?> interceptCall(method: MethodDescriptor<ReqT, RespT>?, callOptions: CallOptions?, next: Channel): ClientCall<ReqT, RespT> {
         return object :
